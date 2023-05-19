@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Case Study"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/groupTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/textColor"
+        android:text="Group GGG"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/member1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
+        android:text="Gasidan Jose renan" />
+
+    <TextView
+        android:id="@+id/member2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
+        android:text="Gayares Jose III" />
+
+    <TextView
+        android:id="@+id/member3TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
+        android:text="Guillergan Raiden" />
+
+    <Button
+        android:id="@+id/euclideanButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary"
+        android:layout_marginTop="16dp"
+        android:text="Euclidean"
+        android:onClick="onEuclideanButtonClick" />
+
+    <Button
+        android:id="@+id/collatzButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/primary"
+
+        android:text="Collatz Sequence"
+        android:onClick="onCollatzButtonClick" />
+
+    <Button
+        android:id="@+id/fibonacciButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Fibonacci Numbers"
+        android:backgroundTint="@color/primary"
+
+        android:onClick="onFibonacciButtonClick" />
+
+    <Button
+        android:id="@+id/lucasButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/primary"
+        android:text="Lucas Numbers"
+        android:onClick="onLucasButtonClick" />
+
+    <Button
+        android:id="@+id/tribonacciButton"
+        android:backgroundTint="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Tribonacci Numbers"
+        android:onClick="onTribonacciButtonClick" />
+
+</LinearLayout>
