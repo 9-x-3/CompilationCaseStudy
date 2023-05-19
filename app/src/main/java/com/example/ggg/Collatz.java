@@ -29,31 +29,39 @@ public class Collatz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Handle submit button click event
-                onSubmitClick();
+                String input = numberEditText.getText().toString();
+
+                if(!input.isEmpty()){
+                    onSubmitClick();
+                }
             }
 
             private void onSubmitClick() {
-
                 answerTextView.setText("");
-                int number = Integer.parseInt(numberEditText.toString());
-
+                int number = Integer.parseInt(numberEditText.getText().toString());
                 if (number % 2 == 0 || number < 0) {
                     Toast.makeText(Collatz.this, "Invalid Output", Toast.LENGTH_SHORT).show();
                 }
-                StringBuilder sequenceString = new StringBuilder();
+                else{
+                    StringBuilder sequenceString = new StringBuilder();
+                    answerTextView.setText("");
 
-                sequenceString.append("The Collatz sequence starting from ").append(number).append(" is:\n\n");
-                sequenceString.append(number).append(", ");
-                while (number != 1) {
-                    if (number % 2 == 0) {
-                        number /= 2;
-                        sequenceString.append(number).append(", ");
-                    } else {
-                        number = 3 * number + 1;
-                        sequenceString.append(number).append(", ");
+                    sequenceString.append("The Collatz sequence starting from ").append(number).append(" is:\n\n");
+                    sequenceString.append(number).append(", ");
+                    while (number != 1) {
+                        if (number % 2 == 0) {
+                            number /= 2;
+                            sequenceString.append(number).append(", ");
+                        } else {
+                            number = 3 * number + 1;
+                            sequenceString.append(number).append(", ");
+                        }
+
+                        String answers = sequenceString.toString();
+                        answerTextView.setText(answers.substring(0, answers.length() - 1));
                     }
-                    answerTextView.setText(sequenceString.toString());
                 }
+
             }
         });
     }
