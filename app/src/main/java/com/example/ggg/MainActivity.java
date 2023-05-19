@@ -5,13 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -80,24 +77,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Methods for button clicks (optional)
-    public void onEuclideanButtonClick(View view) {
-        Toast.makeText(this, "Euclidean button clicked", Toast.LENGTH_SHORT).show();
-    }
-
-    public void onCollatzButtonClick(View view) {
-        Toast.makeText(this, "Collatz Sequence button clicked", Toast.LENGTH_SHORT).show();
-    }
-
-    public void onFibonacciButtonClick(View view) {
-        Toast.makeText(this, "Fibonacci Numbers button clicked", Toast.LENGTH_SHORT).show();
-    }
-
-    public void onLucasButtonClick(View view) {
-        Toast.makeText(this, "Lucas Numbers button clicked", Toast.LENGTH_SHORT).show();
-    }
-
-    public void onTribonacciButtonClick(View view) {
-        Toast.makeText(this, "Tribonacci Numbers button clicked", Toast.LENGTH_SHORT).show();
-    }
 }

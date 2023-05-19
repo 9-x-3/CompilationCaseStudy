@@ -1,9 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Eucledian">
+    android:background="@color/bg"
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Euclidean GCF/LCF Calculator"
+            android:textSize="20sp"
+            android:textColor="@color/textColor"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/textColor"
+
+            android:text="Enter Whole Numbers" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/textColor"
+            android:text="Number 1" />
+
+        <EditText
+            android:id="@+id/number1"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/textColor"
+            android:text="Number 2" />
+
+
+        <EditText
+            android:id="@+id/number2"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/primary"
+            android:text="Submit"
+            android:onClick="onSubmitClick" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solution"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/solution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:textColor="@color/textColor"
+                android:text="Solution" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answer"
+            android:textStyle="bold"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="16dp" />
+
+
+        <LinearLayout
+            android:id="@+id/solutionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/GCD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:textColor="@color/textColor"
+                android:text="GCD:" />
+
+            <TextView
+                android:id="@+id/LCMSOLUTION"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:layout_marginVertical="5dp"
+                android:text="LCM Solution:" />
+            <TextView
+                android:id="@+id/LCMANSWER"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+
+                android:textColor="@color/textColor"
+                android:text="LCM Answer:" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
