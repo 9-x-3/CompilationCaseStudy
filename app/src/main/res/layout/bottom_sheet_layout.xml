@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:fontFamily="@font/gilroybold"
+            android:textColor="@color/primary"
+            android:text="Name of Math"
+            />
+
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:fontFamily="@font/gilroymedium"
+            android:textColor="@color/black"
+            android:text="Tribonacci numbers Tn  have the initial values T0 = 0 , T1 = 0, T2 = 1 and the recursion Tn = Tn-1 + Tn-2 + Tn-3  if n> 3."
+            />
+
+
+
+    </LinearLayout>
+
+</ScrollView>

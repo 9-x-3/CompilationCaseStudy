@@ -22,15 +22,65 @@
                 app:elevation="0dp"
                 android:layout_height="wrap_content">
 
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/main_toolbar"
-                    app:title="Automata"
-                    android:textAlignment="textStart"
-                    app:titleTextColor="@color/textColor"
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:background="@color/primary"
-                    />
+
+                    >
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/main_toolbar"
+                        app:title="Automata"
+                        android:textAlignment="textStart"
+                        app:titleTextColor="@color/textColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?attr/actionBarSize"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/info"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/baseline_info_24"
+                            android:layout_gravity="center"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="70dp"
+                            android:layout_toLeftOf="@+id/developers"
+
+                            app:tint="@color/white"
+                            />
+
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/developers"
+                            android:layout_width="28dp"
+                            android:layout_centerVertical="true"
+
+                            android:layout_height="28dp"
+                            android:src="@drawable/baseline_groups_24"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="20dp"
+                            app:tint="@color/white"
+                            />
+
+                    </RelativeLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
 
             </com.google.android.material.appbar.AppBarLayout>
 
