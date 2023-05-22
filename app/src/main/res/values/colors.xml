@@ -9,9 +9,26 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="bg">#3c3744</color>
-    <color name="primary">#090c9b</color>
-
+    <color name="primary">#819BF8</color>
     <color name="textColor">#fbfff1</color>
 
 
-</resources>
+
+        <color name="background">#FAFAFA</color>
+        <color name="outline">#979691</color>
+        <color name="blue">#819BF8</color>
+        <color name="secondary">#5175F5</color>
+        <color name="textprimary">#565761</color>
+        <color name="texthighlight">#6D6D6D</color>
+        <color name="texthighlight2">#D7C8C8</color>
+        <color name="danger">#FC1B44</color>
+        <color name="shining">#B3B3B3</color>
+        <color name="done">#EAEEFF</color>
+        <color name="green">#83EC5E</color>
+
+
+
+
+    </resources>
+
+

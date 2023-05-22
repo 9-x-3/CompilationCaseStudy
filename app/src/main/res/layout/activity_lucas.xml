@@ -1,9 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Lucas">
+    android:background="@color/bg"
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lucas Numbers"
+            android:textSize="20sp"
+            android:fontFamily="@font/gilroybold"
+            android:textColor="@color/textColor"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/textColor"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/gilroyregular"
+
+            android:text="Enter Number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/textColor"
+            android:visibility="gone"
+            android:text="Number 1" />
+
+        <EditText
+            android:id="@+id/number1"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/gilroybold"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/primary"
+            android:text="Submit"
+            android:onClick="onSubmitClick" />
+
+
+        <TextView
+            android:id="@+id/answer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answer"
+            android:visibility="gone"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/gilroybold"
+            android:textSize="20sp"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+
+        <TextView
+            android:id="@+id/answer"
+            android:fontFamily="@font/gilroyregular"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textStyle="bold"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="16dp" />
+
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,55 +1,82 @@
 package com.example.ggg;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
 
-public class Eucledian extends AppCompatActivity {
+public class Eucledian extends Fragment {
 
     private EditText number1EditText;
     private EditText number2EditText;
-    private LinearLayout solutionLayout;
+    private LinearLayout solutionLayout, solutionCrad;
     private TextView gcdTextView;
     private TextView lcmSolutionTextView;
     private TextView lcmAnswerTextView;
     private TextView solution;
+    private Button submit;
+
     public static ArrayList<String> solutionList = new ArrayList<>();
     String number1String;
     String number2String;
+    View view;
+
+
     private StringBuilder stringBuilder;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eucledian);
 
-        number1EditText = findViewById(R.id.number1);
-        number2EditText = findViewById(R.id.number2);
-        solutionLayout = findViewById(R.id.solutionLayout);
-        gcdTextView = findViewById(R.id.GCD);
-        lcmSolutionTextView = findViewById(R.id.LCMSOLUTION);
-        lcmAnswerTextView = findViewById(R.id.LCMANSWER);
-        solution= findViewById(R.id.solution);
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        view = inflater.inflate(R.layout.activity_eucledian, container, false);
+
+        number1EditText = view.findViewById(R.id.number1);
+        number2EditText = view.findViewById(R.id.number2);
+        solutionLayout = view.findViewById(R.id.solutionLayout);
+        gcdTextView = view.findViewById(R.id.GCD);
+        lcmSolutionTextView = view.findViewById(R.id.LCMSOLUTION);
+        lcmAnswerTextView = view.findViewById(R.id.LCMANSWER);
+        solution= view.findViewById(R.id.solution);
+        solutionCrad = view.findViewById(R.id.solutionCrad);
+        submit  = view.findViewById(R.id.submit);
         number1String = number1EditText.getText().toString();
         number2String = number2EditText.getText().toString();
         stringBuilder = new StringBuilder();
+
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onSubmitClick();
+            }
+        });
+
+
+        return view;
     }
 
-    public void onSubmitClick(View view) {
+    public void onSubmitClick() {
         number1String = number1EditText.getText().toString();
         number2String = number2EditText.getText().toString();
         if (number1String.isEmpty() || number2String.isEmpty()) {
-            Toast.makeText(this, "Please enter both numbers", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Please enter both numbers", Toast.LENGTH_SHORT).show();
             return;
         }else if (number1String.equals("0") && number2String.equals("0")) {
-            Toast.makeText(this, "GCD(0,0) is undefined", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "GCD(0,0) is undefined", Toast.LENGTH_SHORT).show();
             return;
         }else{
             int number1 = Integer.parseInt(number1String);
@@ -71,6 +98,7 @@ public class Eucledian extends AppCompatActivity {
             lcmAnswerTextView.setText("LCM Answer: " + lcm);
             solutionList.clear();
 
+            solutionCrad.setVisibility(View.VISIBLE);
             solutionLayout.setVisibility(View.VISIBLE);
         }
 

@@ -2,27 +2,37 @@ package com.example.ggg;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
-public class Fibonacci extends AppCompatActivity {
+public class Fibonacci extends Fragment {
     private EditText numberEditText;
     private Button submitButton;
-    private TextView answerTextView;
+    private TextView answerTextView,answer_text;
 
+
+    View view;
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fibonacci);
+        view = inflater.inflate(R.layout.activity_fibonacci, container, false);
 
-        numberEditText = findViewById(R.id.number1);
-        submitButton = findViewById(R.id.submit);
-        answerTextView = findViewById(R.id.answer);
+        numberEditText = view.findViewById(R.id.number1);
+        submitButton = view.findViewById(R.id.submit);
+        answerTextView = view.findViewById(R.id.answer);
+        answer_text = view.findViewById(R.id.answer_text);
+
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,25 +40,27 @@ public class Fibonacci extends AppCompatActivity {
                 calculateFibonacci();
             }
         });
+        return view;
+
     }
 
     private void calculateFibonacci() {
         String input = numberEditText.getText().toString();
 
         if (input.isEmpty()) {
-            Toast.makeText(this, "Please enter a number", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Please enter a number", Toast.LENGTH_SHORT).show();
             return;
         }
 
         int count = Integer.parseInt(input);
 
         if (count <= 0) {
-            Toast.makeText(this, "Invalid input. Please enter a positive number", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Invalid input. Please enter a positive number", Toast.LENGTH_SHORT).show();
             return;
         }
 
         StringBuilder sequenceString = new StringBuilder();
-        sequenceString.append("The Fibonacci sequence of fn for 0 <= n <= ").append(count).append("\n");
+        sequenceString.append("The Fibonacci sequence of fn for 0 <= n <= ").append(count).append("\n\n");
 
         int a = 0;
         int b = 1;
@@ -66,6 +78,8 @@ public class Fibonacci extends AppCompatActivity {
 
         String sequence = removeComma(sequenceString.toString());
         answerTextView.setText(sequence);
+
+        answer_text.setVisibility(View.VISIBLE);
     }
 
     private String removeComma(String sequence) {
