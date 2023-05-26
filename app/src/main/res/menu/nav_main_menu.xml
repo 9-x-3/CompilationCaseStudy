@@ -27,4 +27,9 @@
             android:title="Tribonacci"
             />
 
+    <item
+        android:id="@+id/pascual"
+        android:title="Pascal Triangle"
+        />
+
     </menu>

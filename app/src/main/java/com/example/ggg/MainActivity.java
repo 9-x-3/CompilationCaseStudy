@@ -142,6 +142,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 titleMath = "Tribonacci";
                 selectedFragment = new Tribonacci();
                 break;
+
+            case R.id.pascual:
+                titleMath = "Pascal Triangle";
+                selectedFragment = new PascalTriangle();
+                break;
+
+
         }
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
