@@ -83,6 +83,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void developers() {
+        developers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                developersheet = new BottomSheetDialog(MainActivity.this);
+                View view = getLayoutInflater().inflate(R.layout.activity_developers,null,false);
+
+
+                developersheet.setContentView(view);
+                developersheet.show();
+            }
+        });
     }
 
     private void info() {
@@ -127,27 +138,52 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.euclidean:
                 selectedFragment = new Eucledian();
                 titleMath = "Euclidean Algorithm";
+                descriptionMath = "Euclidean numbers do not have a specific definition or formula in mathematics." + "\n" + "\n" +
+                        "However, if you were referring to the Euclidean algorithm, it is a method for finding the greatest common divisor (GCD) of two numbers." + "\n" + "\n" +
+                        "The algorithm repeatedly divides the larger number by the smaller number and takes the remainder until the remainder is zero.:" + "\n" + "\n" +
+                        "The last non-zero remainder obtained is the GCD of the original numbers. The algorithm can be expressed as GCD(a, b) = GCD(b, a mod b).";
 
                 break;
             case R.id.fibonacci:
                 titleMath = "Fibonacci Numbers";
+                descriptionMath = "Fibonacci numbers form a sequence where each number is the sum of the two preceding ones." + "\n" + "\n" +
+                        "It starts with 0 and 1, and subsequent numbers are obtained by adding the previous two." + "\n" + "\n" +
+                        "The sequence begins: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ..." + "\n" + "\n" +
+                        "The formula is F(n) = F(n-1) + F(n-2), with F(0) = 0 and F(1) = 1." + "\n" + "\n" +
+                        "The Fibonacci sequence appears in various fields and exhibits mathematical patterns, including the golden ratio.";
 
-                selectedFragment = new Fibonacci();
-                break;
+            selectedFragment = new Fibonacci();
+            break;
             case R.id.lucas:
                 titleMath = "Lucas";
                 selectedFragment = new Lucas();
+                descriptionMath = "Lucas numbers form a sequence where each number is the sum of the two preceding ones. " + "\n" + "\n" +
+                        "It starts with 2 and 1, and subsequent numbers are obtained by adding the previous two." +
+                        "The sequence begins: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ..." + "\n" + "\n" +
+                        "The formula is L(n) = L(n-1) + L(n-2), with L(0) = 2 and L(1) = 1." + "\n" + "\n" +
+                        "Lucas numbers share similarities with Fibonacci numbers and have their own distinct properties and applications in mathematics..";
+
                 break;
             case R.id.tribonacci:
                 titleMath = "Tribonacci";
                 selectedFragment = new Tribonacci();
+                descriptionMath = "Tribonacci numbers are a sequence where each number is the sum of the three preceding ones." + "\n" + "\n" +
+                        "It starts with 0, 1, 1, and subsequent numbers are obtained by adding the previous three." +
+                        "It starts with 0, 1, 1, and subsequent numbers are obtained by adding the previous three." + "\n" + "\n" +
+                        "It starts with 0, 1, 1, and subsequent numbers are obtained by adding the previous three." + "\n" + "\n" +
+                        "Tribonacci numbers have their own properties and applications in mathematics.";
+
                 break;
 
             case R.id.pascual:
                 titleMath = "Pascal Triangle";
                 selectedFragment = new PascalTriangle();
-                break;
+                descriptionMath = "Pascal's Triangle is a triangular arrangement of numbers, where each number is the sum of the two numbers above it." + "\n" + "\n" +
+                "It starts with a row containing 1, and each subsequent row is formed by adding adjacent numbers from the row above." + "\n" + "\n" +
+                "The formula is C(n, k) = n! / (k! * (n - k)!), where C(n, k) represents the value at the nth row and kth column." + "\n" + "\n" +
+                "Pascal's Triangle has applications in combinatorics, probability, algebra, and number theory.";
 
+                break;
 
         }
 
