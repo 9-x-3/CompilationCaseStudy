@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--    TODO Raiden tatlong pic natin at sa baba submitted to pro lester-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Team GGG"
+        android:textSize="30sp"
+        android:fontFamily="@font/gilroybold"
+        android:textColor="@color/secondary"
+        android:padding="10dp"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_cobver"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/raiden"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:maxWidth="50dp"
+        android:maxHeight="50dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        app:shapeAppearance="?attr/actionButtonStyle"
+        app:shapeAppearanceOverlay="@style/imageViewRounded10"
+        app:strokeColor="@android:color/white"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Raiden Guillergan"
+        android:fontFamily="@font/gilroybold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/renan"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:maxWidth="50dp"
+                android:maxHeight="50dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                app:shapeAppearance="?attr/actionButtonStyle"
+                app:shapeAppearanceOverlay="@style/imageViewRounded10"
+                app:strokeColor="@android:color/white"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jose Renan Gasidan"
+                android:fontFamily="@font/gilroybold"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                />
+
+
+        </LinearLayout>
+
+<!--        thirdy-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/thirdy"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:maxWidth="50dp"
+                android:maxHeight="50dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                app:shapeAppearance="?attr/actionButtonStyle"
+                app:shapeAppearanceOverlay="@style/imageViewRounded10"
+                app:strokeColor="@android:color/white"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jose Gayares"
+
+                android:fontFamily="@font/gilroybold"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submitted To"
+        android:padding="10dp"
+        android:fontFamily="@font/gilroybold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/proflester"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:maxWidth="50dp"
+            android:maxHeight="50dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            app:shapeAppearance="?attr/actionButtonStyle"
+            app:shapeAppearanceOverlay="@style/imageViewRounded10"
+            app:strokeColor="@android:color/white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prof. Lester Diampoc"
+            android:fontFamily="@font/gilroybold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

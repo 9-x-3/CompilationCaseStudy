@@ -65,6 +65,7 @@ public class PascalTriangle extends Fragment {
     }
 
     private void generatePascalTriangle() {
+        triangleLayout.removeAllViews(); // Reset
         for (int row = 0; row < numRows; row++) {
             LinearLayout rowLayout = new LinearLayout(getContext());
             rowLayout.setOrientation(LinearLayout.HORIZONTAL);

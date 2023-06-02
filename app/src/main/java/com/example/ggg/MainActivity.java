@@ -11,14 +11,10 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationView;
@@ -87,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 developersheet = new BottomSheetDialog(MainActivity.this);
-                View view = getLayoutInflater().inflate(R.layout.activity_developers,null,false);
+                View view = getLayoutInflater().inflate(R.layout.bottom_sheet_developers,null,false);
 
 
                 developersheet.setContentView(view);
