@@ -1,37 +1,65 @@
 package com.example.ggg;
 
         import android.os.Bundle;
+        import android.text.Editable;
         import android.view.Gravity;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
+        import android.widget.Button;
+        import android.widget.EditText;
         import android.widget.LinearLayout;
         import android.widget.TextView;
+        import android.widget.Toast;
 
         import androidx.annotation.NonNull;
         import androidx.annotation.Nullable;
         import androidx.fragment.app.Fragment;
+        import java.util.Scanner;
+
 
 public class PascalTriangle extends Fragment {
 
     private View view;
     private LinearLayout triangleLayout;
     private int numRows;
+    private Button calculateButton;
+    private EditText numRowsEditText;
+    TextView cell;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         view = inflater.inflate(R.layout.activity_pascal, container, false);
+        Scanner scanner = new Scanner(System.in);
 
         // Initialize the triangle layout
         triangleLayout = view.findViewById(R.id.triangle_layout);
+        calculateButton = view.findViewById(R.id.Calculate);
+        numRowsEditText = view.findViewById(R.id.numRowsEditText);
+        calculateButton = view.findViewById(R.id.Calculate);
 
-        // Retrieve the number of rows from the user input (you can replace this with your own method)
-        numRows = 15; // Replace with your own logic to get the number of rows from user input
+        calculateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    int input = Integer.parseInt(numRowsEditText.getText().toString());
+                    if(input <= 0){
+                        Toast.makeText(getContext(), "Invalid input", Toast.LENGTH_SHORT).show();
+                    }else{
+                        numRows = input;
+                        generatePascalTriangle();
+                    }
+                }catch (Exception e){
+                    Toast.makeText(getContext(), e.toString(), Toast.LENGTH_SHORT).show();
 
-        // Generate and display the Pascal triangle
-        generatePascalTriangle();
+                }
+
+
+
+            }
+        });
 
         return view;
     }
@@ -50,7 +78,7 @@ public class PascalTriangle extends Fragment {
 
             for (int col = 0; col <= row; col++) {
                 int value = calculatePascalValue(row, col);
-                TextView cell = new TextView(getContext());
+                cell = new TextView(getContext());
                 cell.setTextColor(getResources().getColor(R.color.white));
                 cell.setText(String.valueOf(value));
                 cell.setGravity(Gravity.CENTER);

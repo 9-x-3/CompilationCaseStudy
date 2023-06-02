@@ -133,6 +133,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         switch (item.getItemId()){
             case R.id.collatz:
+                titleMath = "Collatz Sequence";
+                descriptionMath = "The Collatz sequence is defined as follows:\n" +
+                        "\n" +
+                        "1. Start with any positive integer.\n" +
+                        "2. If the current number is even, divide it by 2.\n" +
+                        "3. If the current number is odd, multiply it by 3 and add 1.\n" +
+                        "4. Repeat steps 2 and 3 until the current number becomes 1.\n" +
+                        "In mathematical notation, the Collatz sequence can be represented by the following recursive function:\n" +
+                        "\n" +
+                        "f(n) = {\n" +
+                        "n/2 if n is even,\n" +
+                        "3n + 1 if n is odd.\n" +
+                        "}\n" +
+                        "\n" +
+                        "Where:\n" +
+                        "\n" +
+                        "f(n) represents the next number in the sequence.\n" +
+                        "n is the current number in the sequence.\n" +
+                        "The sequence terminates when the current number reaches 1.";
                 selectedFragment = new Collatz();
                 break;
             case R.id.euclidean:

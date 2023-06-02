@@ -25,7 +25,7 @@
             android:textColor="@color/textColor"
             android:textSize="15sp"
             android:fontFamily="@font/gilroybold"
-            android:text="Enter Whole Numbers" />
+            android:text="Enter two whole numbers" />
 
         <TextView
             android:layout_width="wrap_content"

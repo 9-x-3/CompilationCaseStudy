@@ -25,7 +25,7 @@
             android:textColor="@color/textColor"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/gilroymedium"
-            android:text="Enter Number" />
+            android:text="Enter the initial value" />
 
         <TextView
             android:layout_width="wrap_content"

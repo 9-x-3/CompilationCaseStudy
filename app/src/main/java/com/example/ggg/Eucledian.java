@@ -78,13 +78,22 @@ public class Eucledian extends Fragment {
         }else if (number1String.equals("0") && number2String.equals("0")) {
             Toast.makeText(getContext(), "GCD(0,0) is undefined", Toast.LENGTH_SHORT).show();
             return;
-        }else{
+        }else {
             int number1 = Integer.parseInt(number1String);
             int number2 = Integer.parseInt(number2String);
+            int store = 0;
+
+            if (number2 > number1){
+                store = number1;
+                number1 =number2;
+                number2 = store;
+            }
+
+
 
             solution.setText("");
             // Perform your Euclidean calculation here
-            int gcd = calculateGCD(number1, number2);
+            int gcd = calculateGCD(number2, number1);
             int lcm = calculateLCM(number1, number2);
 
 
