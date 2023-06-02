@@ -104,7 +104,7 @@ public class Eucledian extends Fragment {
             // Display the result
             gcdTextView.setText("GCD: " + gcd);
             lcmSolutionTextView.setText("LCM Solution: ( " + number1 + " x " + number2 + " )     / " + gcd);
-            lcmAnswerTextView.setText("LCM Answer: " + lcm);
+            lcmAnswerTextView.setText("LCM = " + lcm);
             solutionList.clear();
 
             solutionCrad.setVisibility(View.VISIBLE);
